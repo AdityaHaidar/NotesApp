@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .note-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .note-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    background-color: #618758;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: #1f5449;
+    transform: translateY(-2px);
+  }
+  
+  .filter-btn.active {
+    background-color: #1f5449;
+    box-shadow: 0 2px 5px rgba(13, 71, 161, 0.3);
+  }
+  
+  .error-text {
+    color: #e53935;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+  }
+  
+  input.invalid,
+  textarea.invalid {
+    border-color: #e53935 !important;
+    box-shadow: 0 0 0 1px #e53935 !important;
+  }
+  
+  .empty-notes {
+    text-align: center;
+    padding: 2rem;
+    color: #78909c;
+    font-style: italic;
+  }
+  
+  @media (min-width: 768px) {
+    main {
+      padding: 0 2rem;
+    }
+    
+    .note-collection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    main {
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+    
+    .note-container {
+      padding: 1rem;
+    }
+    
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .note-filter {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .filter-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya's NotesApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <app-header></app-header>
+  
+  <main>
+    <section class="note-container">
+      <note-creator></note-creator>
+    </section>
+    
+    <section class="note-container">
+      <div class="note-filter">
+        <button class="filter-btn active" data-filter="all">Semua Catatan</button>
+        <button class="filter-btn" data-filter="active">Catatan Aktif</button>
+        <button class="filter-btn" data-filter="archived">Arsip</button>
+      </div>
+      
+      <note-collection></note-collection>
+    </section>
+  </main>
+  
+  <app-footer></app-footer>
+  
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/components/app-header.js"></script>
+  <script type="module" src="js/components/app-footer.js"></script>
+  <script type="module" src="js/components/note-creator.js"></script>
+  <script type="module" src="js/components/note-collection.js"></script>
+  <script type="module" src="js/components/note-item.js"></script>
+  <script type="module" src="js/data/notes-data.js"></script>
+</body>
+</html>
